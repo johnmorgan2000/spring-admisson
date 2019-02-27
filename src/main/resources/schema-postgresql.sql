@@ -11,12 +11,12 @@ CREATE TABLE IF NOT EXISTS applications(
     graduation TEXT,
     aptitude TEXT,
     dedication TEXT,
-    passion TEXT
+    passion TEXT,
+    meeting TEXT
 );
 
 ALTER TABLE applications OWNER TO "user";
 -- GRANT ALL ON TABLE applications TO "user";
--- GRANT USAGE, SELECT ON SEQUENCE posts_id_seq TO "sprails-blog";
 
 -- GRANT ALL PRIVILEGES ON DATABASE "application-db" TO "user";
 
