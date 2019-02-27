@@ -4,8 +4,10 @@ import com.john.cole.admission.admissionprocess.models.Application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
-public class PostgresApplicationRepository implements Repository<Application> {
+@Repository
+public class PostgresApplicationRepository implements com.john.cole.admission.admissionprocess.repositories.Repository<Application> {
     private JdbcTemplate jdbc;
 
     @Autowired
@@ -28,8 +30,9 @@ public class PostgresApplicationRepository implements Repository<Application> {
             app.getDedication(),
             app.getPassion()
             );
-
     }
-    
 
+    public String[] findAll(){
+        return 
+    }
 }

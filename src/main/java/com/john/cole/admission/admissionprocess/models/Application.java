@@ -34,7 +34,8 @@ public class Application{
     Boolean eligible,
     Integer age,
     String phone, 
-    String graduation,
+    String graduationDay,
+    String graduationMonth,
     String aptitude,
     String dedication,
     String passion
@@ -45,10 +46,14 @@ public class Application{
         this.eligible = eligible;
         this.age = age;
         this.phone = phone;
-        this.graduation = graduation;
+        this.graduation = createGraduation(graduationDay, graduationMonth);
         this.aptitude = aptitude;
         this.dedication = dedication;
         this.passion = passion;
+    }
+
+    public String createGraduation(String graduationDay, String graduationMonth){
+        return graduationDay + "-" + graduationMonth;
     }
 
     public String getName() {
