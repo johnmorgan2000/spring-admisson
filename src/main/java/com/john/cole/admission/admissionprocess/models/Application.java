@@ -2,7 +2,7 @@ package com.john.cole.admission.admissionprocess.models;
 
 import javax.validation.constraints.NotNull;
 
-public class Application{
+public class Application {
 
     @NotNull
     public String name;
@@ -13,7 +13,7 @@ public class Application{
     @NotNull
     public String school;
 
-    @NotNull    
+    @NotNull
     public Boolean eligible;
 
     public Integer age;
@@ -28,31 +28,24 @@ public class Application{
 
     public String passion;
 
-    public Application( String name,
-    String email,
-    String school,
-    Boolean eligible,
-    Integer age,
-    String phone, 
-    String graduationDay,
-    String graduationMonth,
-    String aptitude,
-    String dedication,
-    String passion
-    ){
+    public String meeting;
+
+    public Application(String name, String email, String school, Boolean eligible, Integer age, String phone,
+            String graduation, String aptitude, String dedication, String passion, String meeting) {
         this.name = name;
         this.email = email;
         this.school = school;
         this.eligible = eligible;
         this.age = age;
         this.phone = phone;
-        this.graduation = createGraduation(graduationDay, graduationMonth);
+        this.graduation = graduation;
         this.aptitude = aptitude;
         this.dedication = dedication;
         this.passion = passion;
+        this.meeting = meeting;
     }
 
-    public String createGraduation(String graduationDay, String graduationMonth){
+    public String createGraduation(String graduationDay, String graduationMonth) {
         return graduationDay + "-" + graduationMonth;
     }
 
@@ -136,5 +129,12 @@ public class Application{
         this.passion = passion;
     }
 
-    
+    public String getMeeting() {
+        return meeting;
+    }
+
+    public void setMeeting(String meeting) {
+        this.meeting = meeting;
+    }
+
 }

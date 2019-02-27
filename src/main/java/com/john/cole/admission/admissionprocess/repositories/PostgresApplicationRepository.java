@@ -1,5 +1,9 @@
 package com.john.cole.admission.admissionprocess.repositories;
 
+import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import com.john.cole.admission.admissionprocess.models.Application;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +20,9 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
     }
 
     public void addApplication(Application app){
-        String columns = "name, email, school, eligible, age, phone, graduation, aptitude, dedication, passion";
+        String columns = "name, email, school, eligible, age, phone, graduation, aptitude, dedication, passion, meeting";
         jdbc.update(
-            "INSERT INTO applications (" + columns + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ,
+            "INSERT INTO applications (" + columns + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ,
             app.getName(),
             app.getEmail(),
             app.getSchool(),
@@ -28,12 +32,29 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
             app.getGraduation(),
             app.getAptitude(),
             app.getDedication(),
-            app.getPassion()
+            app.getPassion(),
+            app.getMeeting()
             );
     }
 
-    public String[] findAll(){
-        return jdbc.query("SELECT * FROM applications;", );
+    public List<Application> findAll(){
+        return jdbc.query("SELECT * FROM applications;", this::mapToApplication);
+    }
+
+    public Application mapToApplication(ResultSet rs, int rowNum) throws SQLException {
+        return new Application(
+            rs.getString("name"),
+            rs.getString("email"), 
+            rs.getString("school"), 
+            rs.getBoolean("eligible"), 
+            rs.getInt("age"),
+            rs.getString("phone"),
+            rs.getString("graduation").toString(),
+            rs.getString("aptitude"),
+            rs.getString("dedication"),
+            rs.getString("passion"),
+            rs.getString("meeting").toString()
+        );
     }
 
     
