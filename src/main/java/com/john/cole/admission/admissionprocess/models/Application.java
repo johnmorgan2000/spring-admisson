@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 public class Application {
 
+    public int id;
+
     @NotNull
     public String name;
 
@@ -30,8 +32,9 @@ public class Application {
 
     public String meeting;
 
-    public Application(String name, String email, String school, Boolean eligible, Integer age, String phone,
+    public Application(int id, String name, String email, String school, Boolean eligible, Integer age, String phone,
             String graduation, String aptitude, String dedication, String passion, String meeting) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.school = school;
@@ -44,6 +47,8 @@ public class Application {
         this.passion = passion;
         this.meeting = meeting;
     }
+
+    
 
     public String createGraduation(String graduationDay, String graduationMonth) {
         return graduationDay + "-" + graduationMonth;
@@ -136,5 +141,10 @@ public class Application {
     public void setMeeting(String meeting) {
         this.meeting = meeting;
     }
+
+    public int getId() {
+        return id;
+    }
+
 
 }

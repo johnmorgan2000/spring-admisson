@@ -2,6 +2,7 @@ package com.john.cole.admission.admissionprocess.repositories;
 
 import java.util.List;
 import java.sql.ResultSet;
+import java.util.Optional;
 import java.sql.SQLException;
 
 import com.john.cole.admission.admissionprocess.models.Application;
@@ -41,8 +42,15 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
         return jdbc.query("SELECT * FROM applications;", this::mapToApplication);
     }
 
+    public Optional<Application> findById(int id) {
+
+        return Optional.ofNullable(
+                jdbc.queryForObject("SELECT * FROM applications WHERE id= ?;", this::mapToApplication ,id));
+    }
+
     public Application mapToApplication(ResultSet rs, int rowNum) throws SQLException {
         return new Application(
+            rs.getInt("id"),
             rs.getString("name"),
             rs.getString("email"), 
             rs.getString("school"), 

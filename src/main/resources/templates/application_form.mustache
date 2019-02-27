@@ -1,28 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User</title>
-</head>
-<body>
-    <form method="POST" action="apply">
-        <p>Name: <input name="name" type="text" required</p>
-        <p>Email: <input name="email" type="email" required></p>
-        <p>School: <input name="school" type="text" required></p>
-        <p>Eligible:</p>
-        <p>Yes <input type="radio" name="eligible" value="true" checked></p>
-        <p>No <input type="radio" name="eligible" value="false"></p>
-        <p>Age: <input name="age" type="number"></p>
-        <p>Phone: <input name="phone" type="text"></p>
-        <p>Graduation: <input name="graduationDay" type="text"><br><input name="graduationMonth" type="text"><br>2019</p>
-        <p>Aptitude: <textarea name="aptitude" cols="30" rows="10"></textarea></p>
-        <p>Dedication: <textarea name="dedication" cols="30" rows="10"></textarea></p>
-        <p>Passion: <textarea name="passion" cols="30" rows="10"></textarea></p>
-        <button>Submit</button>
-    </form>
-
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <title>User</title>
+    </head>
+    <body>
+        <div>
+            <p>Student Application Form</p>
+            <p>Base Camp Coding Academy</p>
+            <p>301 North Main Street</p>
+            <p>Water Valley, MS 38965</p>
+            <a href="http://www.basecampcodingacademy.org"
+                >http://www.basecampcodingacademy.org</a
+            >
+            <p>
+                Thank you for applying to BCCA! This is the first step of a two
+                part application process. Strong candidates will be contacted
+                for an in-person interview, so make sure to check your email for
+                follow-up! Base Camp is a targeted program for north Mississippi
+                high school seniors able to live within driving distance of
+                Water Valley.
+            </p>
+            <p>
+                Space at BCCA is very limited. This is a huge opportunity, and
+                responsibility. Please help us understand why you are the right
+                person to receive this opportunity. In order to be eligible to
+                apply you must have first been nominated by a teacher, employer,
+                or other qualified individual who can speak to your abilities.
+            </p>
+            <form method="POST" action="apply">
+                <p>Name: <input name="name" type="text" required /></p>
+                <p>Email: <input name="email" type="email" required /></p>
+                <p>School: <input name="school" type="text" required /></p>
+                <p>Eligible:</p>
+                <p>
+                    Yes
+                    <input type="radio" name="eligible" value="true" checked />
+                </p>
+                <p>No <input type="radio" name="eligible" value="false" /></p>
+                <p>Age: <input name="age" type="number" /></p>
+                <p>Phone: <input name="phone" type="text" /></p>
+                <p>
+                    Graduation:
+                    <input name="graduation" type="date" /><br />2019
+                </p>
+                <p>
+                    Aptitude:
+                    <textarea name="aptitude" cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    Dedication:
+                    <textarea name="dedication" cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    Passion:
+                    <textarea name="passion" cols="30" rows="10"></textarea>
+                </p>
+                <p>Meeting Date: <input name="meeting" type="date" /></p>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
 </html>
