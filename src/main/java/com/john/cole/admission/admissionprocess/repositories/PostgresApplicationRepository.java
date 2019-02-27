@@ -33,6 +33,8 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
     }
 
     public String[] findAll(){
-        return 
+        return jdbc.query("SELECT * FROM applications;", );
     }
+
+    
 }
