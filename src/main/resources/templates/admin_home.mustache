@@ -5,14 +5,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/main.css"
+        />
     </head>
     <body>
         <div class="container">
-            <p>Welcome Admin</p>
+            <ul id="navbar">
+                <li id="navitem"><a href="/">Home</a></li>
+            </ul>
+            <form method="POST" action="admin">
+                <select id="sortBy" name="sortOption">
+                    <option value="school">School</option>
+                    <option value="eligible">Eligible</option>
+                    <option value="nonEligible">Non-Eligible</option>
+                    <option value="all">All</option>
+                </select>
+            </form>
+            <div id="applicationHeaderContainer">
+                <p>Name</p>
+                <p>School</p>
+                <p>Eligible</p>                
+            </div>               
             {{#applications}}
-            <a href="/admin/applicants/{{id}}">{{name}}</a>
+            <div class="applicantContainer applicantGrid">
+                <a href="/admin/applicants/{{ id }}" class="applicantName">{{ name }}</a>
+                <p class="applicantSchool">{{ school }}</p>
+                <p class="applicantEligibility">{{eligible}}</p>                                
+            </div>
             {{/applications}}
         </div>
+
+        <script src="./javascript/index.js"></script>
     </body>
 </html>
