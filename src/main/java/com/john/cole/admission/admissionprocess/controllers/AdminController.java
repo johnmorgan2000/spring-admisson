@@ -3,7 +3,9 @@ package com.john.cole.admission.admissionprocess.controllers;
 import java.util.List;
 
 import com.john.cole.admission.admissionprocess.models.Application;
-import com.john.cole.admission.admissionprocess.repositories.*;
+import com.john.cole.admission.admissionprocess.models.SortByForm;
+import com.john.cole.admission.admissionprocess.repositories.PostgresApplicationRepository;
+import com.john.cole.admission.admissionprocess.repositories.Repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +31,25 @@ public class AdminController {
         return "admin_home";
     }
 
+    @PostMapping("/admin")
+    public String sortBy(Model model, SortByForm form){
+        String option = form.getSortOption();
+        List<Application> applications;
+
+        if (option.equals("school")){
+            applications = appRepostitory.findAllBySchool();
+        }else if (option.equals("eligible")){
+            applications = appRepostitory.findAllEligible();
+        }else if (option.equals("noneligible")){
+            applications = appRepostitory.findAllNonEligible();
+        }else{
+            applications = appRepostitory.findAll();
+        }
+
+        model.addAttribute("applications", applications);
+        return "admin_home";
+    }
+
     @GetMapping("/admin/applicants/{id}")
     public String index(Model model, @PathVariable(value = "id") String id) {
         var app = appRepostitory.findById(Integer.parseInt(id));
@@ -39,4 +60,6 @@ public class AdminController {
             return "404";
         }
     }
+
+    
 }
