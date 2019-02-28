@@ -11,34 +11,54 @@
             media="screen"
             href="./css/main.css"
         />
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/admin_page.css" />
     </head>
     <body>
-        <div class="container">
-            <ul id="navbar">
+        <nav id="navbar">
+            <ul>
                 <li id="navitem"><a href="/">Home</a></li>
             </ul>
-            <form method="POST" action="admin">
-                <select id="sortBy" name="sortOption">
-                    <option value="school">School</option>
+        </nav>
+        <div class="container" id="main">
+
+            <select id="sortBy" name="sortOption">
+                    <option value="all">All</option>
                     <option value="eligible">Eligible</option>
                     <option value="nonEligible">Non-Eligible</option>
-                    <option value="all">All</option>
-                </select>
-            </form>
-            <div id="applicationHeaderContainer">
-                <p>Name</p>
-                <p>School</p>
-                <p>Eligible</p>                
-            </div>               
+            </select>
+
+            <div class="appHeaderContainer">
+                <div class="appHeader">
+                    <p>Name</p>
+                </div>
+                <div class="appHeader">
+                    <p>School</p>
+                </div>
+                <div class="appHeader">
+                    <p>Eligible</p>
+                </div>
+            </div>
+            <hr>
             {{#applications}}
-            <div class="applicantContainer applicantGrid">
-                <a href="/admin/applicants/{{ id }}" class="applicantName">{{ name }}</a>
-                <p class="applicantSchool">{{ school }}</p>
-                <p class="applicantEligibility">{{eligible}}</p>                                
+            <div class="applicantContainer">
+                <div class="appInfoContainer">
+                    <a
+                        class="appInfo"
+                        href="/admin/applicants/{{ id }}"
+                        class="applicantName"
+                        >{{ name }}</a
+                    >
+                </div>
+                <div class="appInfoContainer">
+                    <p class="appSchool">{{ school }}</p>
+                </div>
+                <div>
+                    <p class="appEligible">{{ eligible }}</p>
+                </div>
             </div>
             {{/applications}}
         </div>
 
-        <script src="./javascript/index.js"></script>
+        <script src="./javascript/adminPage.js"></script>
     </body>
 </html>

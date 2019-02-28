@@ -38,37 +38,84 @@
                 apply you must have first been nominated by a teacher, employer,
                 or other qualified individual who can speak to your abilities.
             </p>
-            <form method="POST" action="apply">
-                <p>Name: <input name="name" type="text" required /></p>
-                <p>Email: <input name="email" type="email" required /></p>
-                <p>School: <input name="school" type="text" required /></p>
-                <p>Eligible:</p>
-                <p>
-                    Yes
-                    <input type="radio" name="eligible" value="true" checked />
-                </p>
-                <p>No <input type="radio" name="eligible" value="false" /></p>
-                <p>Age: <input name="age" type="number" /></p>
-                <p>Phone: <input name="phone" type="text" /></p>
-                <p>
-                    Graduation:
-                    <input name="graduation" type="date" /><br />2019
-                </p>
-                <p>
-                    Aptitude:
-                    <textarea name="aptitude" cols="30" rows="10"></textarea>
-                </p>
-                <p>
-                    Dedication:
-                    <textarea name="dedication" cols="30" rows="10"></textarea>
-                </p>
-                <p>
-                    Passion:
-                    <textarea name="passion" cols="30" rows="10"></textarea>
-                </p>
-                <p>Meeting Date: <input name="meeting" type="date" /></p>
+            <form id="applicationForm" method="POST" action="apply">
+                <div class="formContainer" id="formPartOne">
+                    <p>Name:</p>
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Your answer"
+                        required
+                    />
+                    <p>Email:</p>
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Your answer"
+                        required
+                    />
+                    <p>School:</p>
+                    <input
+                        name="school"
+                        type="text"
+                        placeholder="Your answer"
+                        required
+                    />
+                    <p>Do you meet our eligibility requirements?</p>
+                    <label>
+                        Yep, lets get started!<input
+                            class="formRadioButton"
+                            id="radioButtonYes"
+                            type="radio"
+                            name="eligible"
+                            value="true"
+                            required
+                        />
+                    </label>
+                    <label>
+                        I don't think so.<input
+                            class="formRadioButton"
+                            id="radioButtonNo"
+                            type="radio"
+                            name="eligible"
+                            value="false"
+                        />
+                    </label>
+                </div>
+                <div class="formContainer hidden" id="formPartTwo">
+                    <p>Age:</p>
+                    <input class="partTwoInput" name="age" type="number" />
+                    <p>Phone:</p>
+                    <input class="partTwoInput" name="phone" type="text" />
+                    <p>Graduation:</p>
+                    <input class="partTwoInput" name="graduation" type="date" />
+                    <p>Aptitude:</p>
+                    <textarea
+                        class="partTwoInput"
+                        name="aptitude"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <p>Dedication:</p>
+                    <textarea
+                        class="partTwoInput"
+                        name="dedication"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <p>Passion:</p>
+                    <textarea
+                        class="partTwoInput"
+                        name="passion"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <p>Meeting Date:</p>
+                    <input class="partTwoInput" name="meeting" type="date" />
+                </div>
                 <button>Submit</button>
             </form>
         </div>
+        <script src="./../../javascript/formApply.js"></script>
     </body>
 </html>
