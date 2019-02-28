@@ -1,28 +1,4 @@
-div.container {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#navbar {
-    list-style-type: none;
-    padding: 20px;
-    overflow: hidden;
-    background-color: #3b1b0c;
-}
-
-#navitem {
-    float: left;
-    padding: 0% 15px 0% 15px;
-}
-
-#navitem a {
-    font-size: 20px;
-    color: #65809d;
-    text-decoration: none;
-}
-
-#navitem a:hover {
-    color: white;
-}
+@import "_navigation.css";
 
 #infoContainer {
     padding: 0% 10px 0% 10px;
@@ -36,44 +12,19 @@ div.container {
     font-size: 16px;
 }
 
-#baseCampInfoContainer {
-    padding: 20px;
+div.container {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.applicantContainer {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+body {
+    margin: 0;
 }
 
-.applicantContainer a {
-    text-decoration: none;
-    color: #65809d;
-}
-
-.applicantContainer a:hover {
-    color: #000000;
-}
-
-#applicationHeaderContainer {
-    display: flex;
-    justify-content: space-between;
+#main {
+    margin: 10px;
 }
 
 
-.applicantGrid{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    "name school eligible";
-}
-
-.applicantName {
-    grid-area: "name";
-}
-.applicantSchool {
-    grid-area: "school";
-}
-.applicantEligibility {
-    grid-area: "eligible";
+.hidden {
+    display: none;
 }

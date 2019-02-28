@@ -1,0 +1,34 @@
+.applicantContainer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.applicantContainer a {
+    text-decoration: none;
+    color: #65809d;
+}
+
+.applicantContainer a:hover {
+    color: #000000;
+}
+
+.appHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.appHeader {
+    font-size: 19px;
+}
+
+.applicationContainer {
+    display: flex;
+}
+
+.appInfoContainer {
+}
+
+.appInfo {
+    font-size: 17px;
+}

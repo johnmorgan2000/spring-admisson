@@ -1,0 +1,28 @@
+#navbar {
+    position: relative;
+    margin: 0%;
+    page-break-after: 0%;
+    background-color: #3b1b0c;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#navitem {
+    float: left;
+    padding: 0% 15px 0% 15px;
+}
+
+#navitem a {
+    font-size: 20px;
+    color: #65809d;
+    text-decoration: none;
+}
+
+#navitem a:hover {
+    color: white;
+}
