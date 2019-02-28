@@ -10,11 +10,5 @@ public interface Repository<T> {
 
     List<Application> findAll();
 
-    List<Application> findAllEligible();
-
-    List<Application> findAllBySchool();
-
-    List<Application> findAllNonEligible();
-
     Optional<T> findById(int id);
 }

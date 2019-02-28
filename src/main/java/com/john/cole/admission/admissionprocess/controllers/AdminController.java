@@ -36,15 +36,17 @@ public class AdminController {
         String option = form.getSortOption();
         List<Application> applications;
 
-        if (option.equals("school")){
-            applications = appRepostitory.findAllBySchool();
-        }else if (option.equals("eligible")){
-            applications = appRepostitory.findAllEligible();
-        }else if (option.equals("noneligible")){
-            applications = appRepostitory.findAllNonEligible();
-        }else{
-            applications = appRepostitory.findAll();
-        }
+        // if (option.equals("school")){
+        //     applications = appRepostitory.findAllBySchool();
+        // }else if (option.equals("eligible")){
+        //     applications = appRepostitory.findAllEligible();
+        // }else if (option.equals("nonEligible")){
+        //     applications = appRepostitory.findAllNonEligible();
+        // }else{
+        //     applications = appRepostitory.findAll();
+        // }
+
+        applications = appRepostitory.findAll();
 
         model.addAttribute("applications", applications);
         return "admin_home";
