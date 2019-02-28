@@ -55,7 +55,7 @@ public class Application {
     }
 
     public String getName() {
-        return name;
+        return name.trim();
     }
 
     public void setName(String name) {
@@ -63,7 +63,7 @@ public class Application {
     }
 
     public String getEmail() {
-        return email;
+        return email.trim();
     }
 
     public void setEmail(String email) {
@@ -71,7 +71,7 @@ public class Application {
     }
 
     public String getSchool() {
-        return school;
+        return school.trim();
     }
 
     public void setSchool(String school) {
@@ -95,7 +95,7 @@ public class Application {
     }
 
     public String getPhone() {
-        return phone;
+        return phone.trim();
     }
 
     public void setPhone(String phone) {
@@ -103,7 +103,7 @@ public class Application {
     }
 
     public String getGraduation() {
-        return graduation;
+        return graduation.trim();
     }
 
     public void setGraduation(String graduation) {
@@ -111,7 +111,7 @@ public class Application {
     }
 
     public String getAptitude() {
-        return aptitude;
+        return aptitude.trim();
     }
 
     public void setAptitude(String aptitude) {
@@ -119,7 +119,7 @@ public class Application {
     }
 
     public String getDedication() {
-        return dedication;
+        return dedication.trim();
     }
 
     public void setDedication(String dedication) {
@@ -127,7 +127,7 @@ public class Application {
     }
 
     public String getPassion() {
-        return passion;
+        return passion.trim();
     }
 
     public void setPassion(String passion) {
@@ -135,7 +135,7 @@ public class Application {
     }
 
     public String getMeeting() {
-        return meeting;
+        return meeting.trim();
     }
 
     public void setMeeting(String meeting) {
