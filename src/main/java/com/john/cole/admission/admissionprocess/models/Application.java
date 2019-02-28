@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 public class Application {
 
-    public int id;
+    public Integer id;
 
     @NotNull
     public String name;
@@ -32,7 +32,7 @@ public class Application {
 
     public String meeting;
 
-    public Application(int id, String name, String email, String school, Boolean eligible, Integer age, String phone,
+    public Application(Integer id, String name, String email, String school, Boolean eligible, Integer age, String phone,
             String graduation, String aptitude, String dedication, String passion, String meeting) {
         this.id = id;
         this.name = name;
