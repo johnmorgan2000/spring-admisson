@@ -39,7 +39,19 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
     }
 
     public List<Application> findAll(){
-        return jdbc.query("SELECT * FROM applications;", this::mapToApplication);
+        return jdbc.query("SELECT * FROM applications ORDER BY name;", this::mapToApplication);
+    }
+
+    public List<Application> findAllBySchool(){
+        return jdbc.query("SELECT * FROM applications ORDER BY school, name;", this::mapToApplication);
+    }
+
+    public List<Application> findAllEligible(){
+        return jdbc.query("SELECT * FROM applications WHERE eligible IS true;", this::mapToApplication);
+    }
+
+    public List<Application> findAllNonEligible(){
+        return jdbc.query("SELECT * FROM applications WHERE eligible IS false;", this::mapToApplication);
     }
 
     public Optional<Application> findById(int id) {
