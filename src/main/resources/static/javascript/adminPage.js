@@ -9,34 +9,24 @@ function filterApplications() {
                 .querySelector(".applicantEligible i")
                 .classList.contains("isEligible");
             if (filter === "all") {
-                removeHidden(app);
+                app.classList.remove("filtered");
             } else if (filter === "eligible") {
                 if (eligible === true) {
-                    removeHidden(app);
+                    app.classList.remove("filtered");
                 } else {
-                    addHidden(app);
+                    app.classList.add("filtered");
                 }
             } else if (filter === "nonEligible") {
                 if (eligible === false) {
-                    removeHidden(app);
+                    app.classList.remove("filtered");
                 } else {
-                    addHidden(app);
+                    app.classList.add("filtered");
                 }
             }
         }
     });
 }
 filterApplications();
-
-function addHidden(element) {
-    element.classList.add("hidden");
-    element.classList.remove("show");
-}
-
-function removeHidden(element) {
-    element.classList.remove("hidden");
-    element.classList.add("show");
-}
 
 function listenForSearch() {
     const searchBar = document.querySelector("#adminSearchBar");
@@ -51,20 +41,16 @@ function searchApplications() {
     var searchInput = document
         .querySelector("#adminSearchBar")
         .value.toLowerCase();
-    var applications = document.querySelectorAll(".applicantContainer");
+    var applications = document.querySelectorAll(
+        ".applicantContainer:not(.filtered)"
+    );
     for (const app of applications) {
-        
-            var name = app
-                .querySelector(".applicantName")
-                .innerText.toLowerCase();
-            var school = app
-                .querySelector(".appSchool")
-                .innerText.toLowerCase();
-            if (name.includes(searchInput) || school.includes(searchInput)) {
-                removeHidden(app);
-            } else {
-                addHidden(app);
-            }
-        
+        var name = app.querySelector(".applicantName").innerText.toLowerCase();
+        var school = app.querySelector(".appSchool").innerText.toLowerCase();
+        if (name.includes(searchInput) || school.includes(searchInput)) {
+            app.classList.remove("searched");
+        } else {
+            app.classList.add("searched");
+        }
     }
 }
