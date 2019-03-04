@@ -21,9 +21,9 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
     }
 
     public void addApplication(Application app){
-        String columns = "name, email, school, eligible, age, phone, graduation, aptitude, dedication, passion, meeting";
+        String columns = "name, email, school, eligible, age, phone, graduation, plans, aptitude, dedication, passion, meeting";
         jdbc.update(
-            "INSERT INTO applications (" + columns + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ,
+            "INSERT INTO applications (" + columns + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);" ,
             app.getName(),
             app.getEmail(),
             app.getSchool(),
@@ -31,6 +31,7 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
             app.getAge(),
             app.getPhone(),
             app.getGraduation(),
+            app.getPlans(),
             app.getAptitude(),
             app.getDedication(),
             app.getPassion(),
@@ -58,6 +59,7 @@ public class PostgresApplicationRepository implements com.john.cole.admission.ad
             rs.getInt("age"),
             rs.getString("phone"),
             rs.getString("graduation").toString(),
+            rs.getString("plans"),
             rs.getString("aptitude"),
             rs.getString("dedication"),
             rs.getString("passion"),
