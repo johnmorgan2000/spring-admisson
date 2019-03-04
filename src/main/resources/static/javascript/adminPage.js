@@ -5,19 +5,22 @@ function filterApplications() {
         var filter = select.value;
 
         for (const app of applications) {
+            var eligible = app
+                .querySelector(".applicantEligible i")
+                .classList.contains("isEligible");
             if (filter === "all") {
-                removeClassName("hidden", app);
+                removeHidden(app);
             } else if (filter === "eligible") {
-                if (app.querySelector(".appEligible").innerText === "true") {
-                    removeClassName("hidden", app);
+                if (eligible === true) {
+                    removeHidden(app);
                 } else {
-                    addClassName("hidden", app);
+                    addHidden(app);
                 }
             } else if (filter === "nonEligible") {
-                if (app.querySelector(".appEligible").innerText === "false") {
-                    removeClassName("hidden", app);
+                if (eligible === false) {
+                    removeHidden(app);
                 } else {
-                    addClassName("hidden", app);
+                    addHidden(app);
                 }
             }
         }
@@ -25,27 +28,43 @@ function filterApplications() {
 }
 filterApplications();
 
-function addClassName(className, element) {
-    if (!element.classList.contains(className)) {
-        element.classList.add(className);
-    }
+function addHidden(element) {
+    element.classList.add("hidden");
+    element.classList.remove("show");
 }
 
-function removeClassName(className, element) {
-    if (element.classList.contains(className)) {
-        element.classList.remove(className);
-    }
+function removeHidden(element) {
+    element.classList.remove("hidden");
+    element.classList.add("show");
 }
 
-// window.onload = function() {
-//     if (localStorage.getItem("filter") !== null) {
-//         select.value = localStorage.getItem("filter");
-//     }
-// };
+function listenForSearch() {
+    const searchBar = document.querySelector("#adminSearchBar");
+    searchBar.addEventListener("input", function() {
+        searchApplications();
+    });
+}
 
-// select.onchange = function() {
-//     var parent = select.parentElement;
-//     console.log(parent);
-//     localStorage.setItem("filter", select.value);
-//     parent.submit();
-// };
+listenForSearch();
+
+function searchApplications() {
+    var searchInput = document
+        .querySelector("#adminSearchBar")
+        .value.toLowerCase();
+    var applications = document.querySelectorAll(".applicantContainer");
+    for (const app of applications) {
+        
+            var name = app
+                .querySelector(".applicantName")
+                .innerText.toLowerCase();
+            var school = app
+                .querySelector(".appSchool")
+                .innerText.toLowerCase();
+            if (name.includes(searchInput) || school.includes(searchInput)) {
+                removeHidden(app);
+            } else {
+                addHidden(app);
+            }
+        
+    }
+}
