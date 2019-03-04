@@ -33,18 +33,7 @@ public class AdminController {
 
     @PostMapping("/admin")
     public String sortBy(Model model, SortByForm form){
-        String option = form.getSortOption();
         List<Application> applications;
-
-        // if (option.equals("school")){
-        //     applications = appRepostitory.findAllBySchool();
-        // }else if (option.equals("eligible")){
-        //     applications = appRepostitory.findAllEligible();
-        // }else if (option.equals("nonEligible")){
-        //     applications = appRepostitory.findAllNonEligible();
-        // }else{
-        //     applications = appRepostitory.findAll();
-        // }
 
         applications = appRepostitory.findAll();
 
