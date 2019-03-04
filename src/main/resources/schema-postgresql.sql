@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS applications(
     age INTEGER,
     phone TEXT,
     graduation TEXT,
+    plans TEXT,
     aptitude TEXT,
     dedication TEXT,
     passion TEXT,
