@@ -1,7 +1,5 @@
 .tiny-text {
     font-size: 14px;
-    margin:0;
-    padding:0;
 }
 .requiredWord {
     color: #c5221f;
@@ -17,7 +15,23 @@
     font-size: 32px;
 }
 
+.info-paragraph {
+    font-size: 13.5px;
+}
+
 .info-text {
-    margin: 0;
-    font-size: 14px;
+    margin:0;
+    font-size: 13px;
+}
+
+.form-padding{
+    padding-left: 3.75%;
+    padding-right: 1.25%;
+}
+
+.submit{
+    color: white;
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+    border-radius: 2.5px;
 }

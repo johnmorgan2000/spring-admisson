@@ -1,13 +1,27 @@
-.headerImageContainer{
-    background-image: url("images/");
+.headerImageContainer {
+    background-image: url("../images/BaseCamp_HeaderFeature_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 175px;
+    margin: 0;
+    padding: 0;
+}
+
+#bccaHomeLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
 }
 
 #infoContainer {
-    padding: 0% 10px 0% 10px;
+    padding: 15px;
     background-color: white;
+    height: 100vh;
 }
 
 #infoHeader {
+    margin: 0;
     font-size: 35px;
 }
 

@@ -1,8 +1,10 @@
 #navbar {
-    position: relative;
+    position: fixed;
     margin: 0%;
     page-break-after: 0%;
     background-color: var(--base-brown);
+    top: 0;
+    width: 100%;
 }
 
 #navbar ul {

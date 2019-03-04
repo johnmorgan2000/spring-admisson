@@ -13,6 +13,7 @@ div.container {
 
 body {
     margin: 0;
+    padding-top: 64px;
     background-color: var(--base-grey);
 }
 
@@ -86,6 +87,8 @@ input {
     border-bottom: 1px solid #e0e0e0;
 }
 
+.filtered,
+.searched,
 .hidden {
     display: none;
 }
