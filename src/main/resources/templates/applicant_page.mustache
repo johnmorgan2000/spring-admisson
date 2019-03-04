@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Applicant Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-</head>
-<body>
-    <div class="container">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Applicant Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./../../css/applicant_page.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./../../css/main.css"
+        />
+        
+    </head>
+    <body>
+        <nav id="navbar">
+            <ul>
+                <li id="navitem"><a href="/admin">Back to Applications</a></li>
+            </ul>
+        </nav>
+        <div id="applicantMain" class="container card">
             {{#applicant}}
-                <p>{{name}}</p>
-                <p>{{school}}</p>
+            <div id="applicantHeader">
+                <p id="applicantName" class="applicantSection">{{ name }}</p>
+                <hr />
+                <a id="applicantEmail" href="mailto:{{ email }}">{{ email }}</a>
+            </div>
+            <div id="applicantInfoContainer">
+                <p class="applicantSection applicantInfo">
+                    <span class="label">School:</span><p class="applicantInfoText">{{school}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Age: </span> <p class="applicantInfoText">{{age}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Graduation: </span><p class="applicantInfoText">{{graduation}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Phone: </span><p class="applicantInfoText">{{phone}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Meeting Date: </span> <p class="applicantInfoText">{{meeting}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                        <span class="label">Future Plans: </span> <p class="applicantInfoText paragraphText">{{plans}}</p>
+                    </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Aptitude: </span> <p class="applicantInfoText paragraphText">{{aptitude}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Dedication: </span> <p class="applicantInfoText paragraphText">{{dedication}}</p>
+                </p>
+                <p class="applicantSection applicantInfo">
+                    <span class="label">Passion: </span> <p class="applicantInfoText paragraphText">{{passion}}</p>
+                </p>
+            </div>
             {{/applicant}}
-    </div>
-</body>
+        </div>
+    </body>
 </html>
-
-

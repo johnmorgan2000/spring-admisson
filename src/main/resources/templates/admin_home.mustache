@@ -5,40 +5,81 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/admin_page.css"
+        />
         <link
             rel="stylesheet"
             type="text/css"
             media="screen"
             href="./css/main.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
     </head>
     <body>
-        <div class="container">
-            <ul id="navbar">
+        <nav id="navbar">
+            <ul>
                 <li id="navitem"><a href="/">Home</a></li>
             </ul>
-            <form method="POST" action="admin">
+        </nav>
+        <div class="container card">
+            <div id="appSortContainer">
+                <input type="search" placeholder="Search..." id="adminSearchBar" />
                 <select id="sortBy" name="sortOption">
-                    <option value="school">School</option>
+                    <option value="all">All</option>
                     <option value="eligible">Eligible</option>
                     <option value="nonEligible">Non-Eligible</option>
-                    <option value="all">All</option>
                 </select>
-            </form>
-            <div id="applicationHeaderContainer">
-                <p>Name</p>
-                <p>School</p>
-                <p>Eligible</p>                
-            </div>               
+            </div>
+            <div class="appHeaderContainer">
+                <div class="appHeader">
+                    <p>Name</p>
+                </div>
+                <div class="appHeader schoolColumn">
+                    <p>School</p>
+                </div>
+                <div class="appHeader eligibleColumn">
+                    <p>Eligibility</p>
+                </div>
+            </div>
             {{#applications}}
-            <div class="applicantContainer applicantGrid">
-                <a href="/admin/applicants/{{ id }}" class="applicantName">{{ name }}</a>
-                <p class="applicantSchool">{{ school }}</p>
-                <p class="applicantEligibility">{{eligible}}</p>                                
+            <div class="applicantContainer show">
+                <div class="appInfoContainer">
+                    <a
+                        class="appInfo applicantName"
+                        href="/admin/applicants/{{ id }}"
+                        >{{ name }}</a
+                    >
+                </div>
+                <div class="appInfoContainer applicantSchool">
+                    <p class="appSchool">{{ school }}</p>
+                </div>
+                <div class="applicantEligible">
+                    {{#eligible}}
+                    <i
+                        class="fas fa-check isEligibleImage isEligible"
+                        value="{{ eligible }}"
+                    ></i>
+                    {{/eligible}}
+                    {{^eligible}}
+                    <i
+                        class="fas fa-times notEligibleImage"
+                        value="{{ eligible }}"
+                    ></i>
+                    {{/eligible}}
+                </div>
             </div>
             {{/applications}}
         </div>
-
-        <script src="./javascript/index.js"></script>
+        <script src="./javascript/adminPage.js"></script>
     </body>
 </html>
