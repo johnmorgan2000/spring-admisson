@@ -24,6 +24,8 @@ public class Application {
 
     public String graduation;
 
+    public String plans;
+
     public String aptitude;
 
     public String dedication;
@@ -32,8 +34,9 @@ public class Application {
 
     public String meeting;
 
-    public Application(Integer id, String name, String email, String school, Boolean eligible, Integer age, String phone,
-            String graduation, String aptitude, String dedication, String passion, String meeting) {
+    public Application(Integer id, String name, String email, String school, Boolean eligible, Integer age,
+            String phone, String graduation, String plans, String aptitude, String dedication, String passion,
+            String meeting) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -42,20 +45,19 @@ public class Application {
         this.age = age;
         this.phone = phone;
         this.graduation = graduation;
+        this.plans = plans;
         this.aptitude = aptitude;
         this.dedication = dedication;
         this.passion = passion;
         this.meeting = meeting;
     }
 
-    
-
     public String createGraduation(String graduationDay, String graduationMonth) {
         return graduationDay + "-" + graduationMonth;
     }
 
     public String getName() {
-        return name;
+        return name.trim();
     }
 
     public void setName(String name) {
@@ -63,7 +65,7 @@ public class Application {
     }
 
     public String getEmail() {
-        return email;
+        return email.trim();
     }
 
     public void setEmail(String email) {
@@ -71,7 +73,7 @@ public class Application {
     }
 
     public String getSchool() {
-        return school;
+        return school.trim();
     }
 
     public void setSchool(String school) {
@@ -95,7 +97,7 @@ public class Application {
     }
 
     public String getPhone() {
-        return phone;
+        return phone.trim();
     }
 
     public void setPhone(String phone) {
@@ -103,15 +105,23 @@ public class Application {
     }
 
     public String getGraduation() {
-        return graduation;
+        return graduation.trim();
     }
 
     public void setGraduation(String graduation) {
         this.graduation = graduation;
     }
 
+    public String getPlans() {
+        return plans.trim();
+    }
+
+    public void setPlans(String plans) {
+        this.plans = plans;
+    }
+
     public String getAptitude() {
-        return aptitude;
+        return aptitude.trim();
     }
 
     public void setAptitude(String aptitude) {
@@ -119,7 +129,7 @@ public class Application {
     }
 
     public String getDedication() {
-        return dedication;
+        return dedication.trim();
     }
 
     public void setDedication(String dedication) {
@@ -127,7 +137,7 @@ public class Application {
     }
 
     public String getPassion() {
-        return passion;
+        return passion.trim();
     }
 
     public void setPassion(String passion) {
@@ -135,7 +145,7 @@ public class Application {
     }
 
     public String getMeeting() {
-        return meeting;
+        return meeting.trim();
     }
 
     public void setMeeting(String meeting) {
@@ -145,6 +155,5 @@ public class Application {
     public int getId() {
         return id;
     }
-
 
 }
