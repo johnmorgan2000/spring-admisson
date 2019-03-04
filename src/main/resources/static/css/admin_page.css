@@ -1,34 +1,74 @@
-.applicantContainer {
+.applicantContainer,
+.appHeaderContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.applicantContainer div,
+.appHeaderContainer div {
+    width: 33%;
+}
+
+.applicantSchool,
+.applicantEligible,
+.schoolColumn,
+.eligibleColumn {
     text-align: center;
 }
 
 .applicantContainer a {
     text-decoration: none;
-    color: #65809d;
+    font-weight: bold;
+    color: var(--base-blue-dark);
 }
 
 .applicantContainer a:hover {
-    color: #000000;
+    color: rgb(85, 85, 85);
+}
+
+#appSortContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
 .appHeaderContainer {
     display: flex;
     justify-content: space-between;
+    color: rgb(66, 66, 66);
+    border-bottom: 2px solid rgb(66, 66, 66);
+    margin: 10px 0px 10px 0px;
 }
 
-.appHeader {
-    font-size: 19px;
+.appHeader p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
 }
 
 .applicationContainer {
     display: flex;
 }
 
-.appInfoContainer {
+.appSchool {
+    margin: 4px;
+    color: var(--base-brown);
+    font-weight: bold;
 }
 
 .appInfo {
     font-size: 17px;
+}
+
+.isEligibleImage {
+    color: var(--base-blue-dark);
+    font-size: 20px;
+}
+
+.notEligibleImage {
+    color: var(--base-brown);
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,0 +1,16 @@
+.headerImageContainer{
+    background-image: url("images/");
+}
+
+#infoContainer {
+    padding: 0% 10px 0% 10px;
+    background-color: white;
+}
+
+#infoHeader {
+    font-size: 35px;
+}
+
+#infoBody {
+    font-size: 16px;
+}

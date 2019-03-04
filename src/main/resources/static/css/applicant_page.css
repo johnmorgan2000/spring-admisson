@@ -1,0 +1,48 @@
+#applicantMain {
+    padding: 5px 20px 5px 20px;
+    box-sizing: border-box;
+}
+
+#applicantHeader {
+    text-align: center;
+}
+
+#applicantName {
+    font-size: 40px;
+    margin: 0;
+}
+
+#applicantEmail {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.applicantInfo {
+    font-size: 25px;
+}
+
+#applicantInfoContainer {
+    padding: 0px 5px 0px 0px;
+}
+
+#applicantInfoContainer div p {
+    margin: 8px;
+}
+
+.applicantInfoText {
+    font-size: 22px;
+    padding-left: 5px;
+}
+
+.paragraphText {
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.label {
+    color: rgb(58, 58, 58);
+    font-weight: 700;
+    margin-right: 5px;
+    display: block;
+}
