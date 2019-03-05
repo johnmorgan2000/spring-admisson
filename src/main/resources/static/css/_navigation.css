@@ -5,12 +5,14 @@
     background-color: var(--base-brown);
     top: 0;
     width: 100%;
+    height: 50px;
+    z-index: 2;
 }
 
 #navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 20px;
+    padding: 12px;
     overflow: hidden;
 }
 

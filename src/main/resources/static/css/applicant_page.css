@@ -15,6 +15,9 @@
 #applicantEmail {
     text-decoration: none;
     font-size: 24px;
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .applicantInfo {
@@ -38,6 +41,11 @@
     display: block;
     width: 100%;
     word-wrap: break-word;
+}
+
+#eligibilityMessage {
+    font-size: 20px;
+    color: red;
 }
 
 .label {

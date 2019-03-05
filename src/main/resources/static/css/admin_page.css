@@ -1,3 +1,21 @@
+body {
+    background-image: url("./../images/classroom.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 175px;
+    margin: 0;
+    padding: 0;
+}
+
+#adminCard {
+    margin-top: 30%;
+}
+
+#appSortContainer {
+    display: flex;
+}
+
 .applicantContainer,
 .appHeaderContainer {
     display: flex;
@@ -7,6 +25,11 @@
 .applicantContainer div,
 .appHeaderContainer div {
     width: 33%;
+}
+
+p.appSchool,
+.schoolColumn p {
+    text-align: left;
 }
 
 .applicantSchool,
@@ -69,6 +92,37 @@
     font-size: 20px;
 }
 
+#sortBy {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#adminSearchBar {
+    width: 100%;
+    margin-left: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.filtered,
+.searched,
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .appHeader p {
+        font-size: 16px;
+    }
+    .appInfo,
+    .appSchool {
+        font-size: 13px;
+    }
+    .applicantEligible i {
+        font-size: 17px;
+    }
+    .applicantContainer div,
+    .appHeaderContainer div {
+        width: 40%;
+    }
 }
