@@ -2,6 +2,7 @@
     background-image: url("../images/BaseCamp_HeaderFeature_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 175px;
     margin: 0;
     padding: 0;
@@ -11,20 +12,44 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 35px;
+    padding-top: 45px;
 }
 
 #infoContainer {
     padding: 15px;
     background-color: white;
-    height: 100vh;
+    color: #333333;
+    height: auto;
+}
+
+#infoContainer p {
+    padding: 0px 0px 15px 0px;
+    margin: 0;
 }
 
 #infoHeader {
     margin: 0;
-    font-size: 35px;
+    font-size: 36px;
 }
 
 #infoBody {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#footerContainer {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+#copyrightText {
+    font-size: 15px;
+}
+
+.linkIcon {
+    padding: 2px;
+}
+
+#classImage {
+    width: 100%;
 }
