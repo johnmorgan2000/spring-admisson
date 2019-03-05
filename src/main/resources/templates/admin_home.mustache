@@ -29,31 +29,31 @@
     </head>
     <body>
         <nav id="navbar">
-            <ul>
-                <li id="navitem"><a href="/">Home</a></li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li id="navitem"><a href="/">Home</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="container ">
             <div class="row justify-content-around">
                 <div class="col-lg-8 col-md-12 col-sm-12 ">
                     <div id="adminCard" class="card ">
                         <div class="row">
+                            <input
+                                class="col-4"
+                                type="search"
+                                placeholder="Search..."
+                                id="adminSearchBar"
+                            />
 
-                                <input
-                                    class="col-4"
-                                    type="search"
-                                    placeholder="Search..."
-                                    id="adminSearchBar"
-                                />
-                            
-                                <select class="col-3" id="sortBy" name="sortOption">
-                                    <option value="all">All</option>
-                                    <option value="eligible">Eligible</option>
-                                    <option value="nonEligible"
-                                        >Non-Eligible</option
-                                    >
-                                </select>
-                            
+                            <select class="col-3" id="sortBy" name="sortOption">
+                                <option value="all">All</option>
+                                <option value="eligible">Eligible</option>
+                                <option value="nonEligible"
+                                    >Non-Eligible</option
+                                >
+                            </select>
                         </div>
 
                         <div class="appHeaderContainer">
@@ -63,9 +63,7 @@
                             <div class="appHeader schoolColumn">
                                 <p>School</p>
                             </div>
-                            <div
-                                class="appHeader eligibleColumn"
-                            >
+                            <div class="appHeader eligibleColumn">
                                 <p>Eligibility</p>
                             </div>
                         </div>

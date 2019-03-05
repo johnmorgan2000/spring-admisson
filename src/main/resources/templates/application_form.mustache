@@ -16,264 +16,319 @@
             media="screen"
             href="./../css/appForm.css"
         />
+        <link rel="stylesheet" href="./../bootstrap/bootstrap.css" />
         <title>Application Form</title>
     </head>
     <body>
-        <div class="card">
-            <div class="blue-bar"></div>
-            <div class="form-padding" id="baseCampInfoContainer">
-                <p class="header">Student Application Form</p>
-                <p class="tiny-text info-text">Base Camp Coding Academy</p>
-                <p class="tiny-text info-text">301 North Main Street</p>
-                <p class="tiny-text info-text">Water Valley, MS 38965</p>
-                <a
-                    class="tiny-text info-text"
-                    target="blank"
-                    href="http://www.basecampcodingacademy.org"
-                    >http://www.basecampcodingacademy.org</a
-                >
-                <p class="tiny-text" id="infoBody">
-                    Thank you for applying to BCCA! This is the first step of a
-                    two part application process. Strong candidates will be
-                    contacted for an in-person interview, so make sure to check
-                    your email for follow-up! Base Camp is a targeted program
-                    for north Mississippi high school seniors able to live
-                    within driving distance of Water Valley.
-                </p>
-                <p class="tiny-text" id="infoBody">
-                    Space at BCCA is very limited. This is a huge opportunity,
-                    and responsibility. Please help us understand why you are
-                    the right person to receive this opportunity. In order to be
-                    eligible to apply you must have first been nominated by a
-                    teacher, employer, or other qualified individual who can
-                    speak to your abilities.
-                </p>
+        <nav id="navbar">
+            <div class="container">
+                <ul>
+                    <li id="navitem"><a>Back</a></li>
+                </ul>
             </div>
-            <form id="applicationForm" method="POST" action="apply">
-                <div class="formContainer form-padding" id="formPartOne">
-                    <p class="requiredWord tiny-text">* Required</p>
-                    <p class="text">
-                        Name:<span class="requiredAsterisk">*</span>
-                    </p>
-                    <input
-                        name="name"
-                        type="text"
-                        placeholder="Your answer"
-                        required
-                    />
-                    <p class="text">
-                        Email Address:<span class="requiredAsterisk">*</span>
-                    </p>
-                    <input
-                        name="email"
-                        type="email"
-                        placeholder="Your answer"
-                        required
-                    />
-                    <p class="text">
-                        School you currently attend:<span
-                            class="requiredAsterisk"
-                            >*</span
-                        >
-                    </p>
-                    <input
-                        name="school"
-                        type="text"
-                        placeholder="Your answer"
-                        required
-                    />
-                    <p class="text">
-                        Do you meet our eligibility requirements?<span
-                            class="requiredAsterisk"
-                            >*</span
-                        >
-                        <br />
-                        <span class="tiny-text">
-                            Are you a high school senior? Have you been
-                            nominated? Do you live in north Mississippi?
-                        </span>
-                    </p>
-                    <label>
-                        <input
-                            class="formRadioButton"
-                            id="radioButtonYes"
-                            type="radio"
-                            name="eligible"
-                            value="true"
-                            required
-                        />
-                        Yep, lets get started! </label
-                    ><br /><br />
-                    <label>
-                        <input
-                            class="formRadioButton"
-                            id="radioButtonNo"
-                            type="radio"
-                            name="eligible"
-                            value="false"
-                        />
-                        I don't think so.
-                    </label>
-                </div>
-                <div class="formContainer hidden" id="formPartTwo">
-                    <p class="brown-banner banner-full banner-text">
-                        Application Information
-                    </p>
-                    <p class="brown-banner banner-half banner-text">
-                        Let us get to know you better!
-                    </p>
-                    <div class="form-padding">
-                        <p class="text">
-                            Age:<span class="requiredAsterisk">*</span>
-                        </p>
-                        <input
-                            class="partTwoInput"
-                            placeholder="Your answer"
-                            name="age"
-                            type="number"
-                        />
-
-                        <p class="text">
-                            Phone:<span class="requiredAsterisk">*</span><br><span class="tiny-text greyify">Ex. 1234567890</span>
-                        </p>
-                        <input
-                            class="partTwoInput"
-                            id="phoneInput"
-                            placeholder="Your answer"
-                            name="phone"
-                            pattern= "^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" 
-                            type="text"
-                        />
-
-                        <p class="text">
-                            Graduation:<span class="requiredAsterisk">*</span>
-                        </p>
-                        <input
-                            class="partTwoInput"
-                            placeholder="Your answer"
-                            name="graduation"
-                            type="date"
-                        />
-
-                        <div class="group-info">
-                            <p class="text">
-                                What is your current plan for next year?<span
-                                    class="requiredAsterisk"
-                                    >*</span
-                                >
-                                <br /><span class="tiny-text"
-                                    >What do you plan to do after you graduate
-                                    high school if it were not for Base
-                                    Camp?</span
-                                >
+        </nav>
+        <div class="container ">
+            <div class="row justify-content-around">
+                <div class="col-lg-8 col-md-12 col-sm-12 ">
+                    <div class="card">
+                        <div class="blue-bar"></div>
+                        <div class="form-padding" id="baseCampInfoContainer">
+                            <p class="header">Student Application Form</p>
+                            <p class="tiny-text info-text">
+                                Base Camp Coding Academy
+                            </p>
+                            <p class="tiny-text info-text">
+                                301 North Main Street
+                            </p>
+                            <p class="tiny-text info-text">
+                                Water Valley, MS 38965
+                            </p>
+                            <a
+                                class="tiny-text info-text"
+                                target="blank"
+                                href="http://www.basecampcodingacademy.org"
+                                >http://www.basecampcodingacademy.org</a
+                            >
+                            <p class="tiny-text" id="infoBody">
+                                Thank you for applying to BCCA! This is the
+                                first step of a two part application process.
+                                Strong candidates will be contacted for an
+                                in-person interview, so make sure to check your
+                                email for follow-up! Base Camp is a targeted
+                                program for north Mississippi high school
+                                seniors able to live within driving distance of
+                                Water Valley.
+                            </p>
+                            <p class="tiny-text" id="infoBody">
+                                Space at BCCA is very limited. This is a huge
+                                opportunity, and responsibility. Please help us
+                                understand why you are the right person to
+                                receive this opportunity. In order to be
+                                eligible to apply you must have first been
+                                nominated by a teacher, employer, or other
+                                qualified individual who can speak to your
+                                abilities.
                             </p>
                         </div>
-                        <textarea
-                            placeholder="Your answer"
-                            class="partTwoInput"
-                            name="plans"
-                            cols="30"
-                            rows="10"
-                        >
-                        </textarea>
-                    </div>
-                    <div class="brown-banner banner-full banner-text">
-                        <p>
-                            Base Camp Coding Academy is looking for students
-                            with the aptitude, and the dedication, to succeed in
-                            this program. Please share stories and examples of
-                            these two traits that demonstrate why you believe
-                            you will make an excellent candidate.
-                        </p>
-                    </div>
-                    <div class="form-padding">
-                        <div>
-                            <p class="tiny-text">
-                                For example, you might include times when you
-                                were able to think logically or creatively to
-                                solve a problem, or when you overcame a
-                                challenging situation with school, work, or a
-                                project.
-                            </p>
-                        </div>
-                        <p class="text">
-                            Aptitude:<span class="requiredAsterisk">*</span>
-                            <br /><span class="tiny-text"
-                                >Please share a specific example of when you
-                                were a strong problem solver.</span
+                        <form id="applicationForm" method="POST" action="apply">
+                            <div
+                                class="formContainer form-padding"
+                                id="formPartOne"
                             >
-                        </p>
-                        <textarea
-                            placeholder="Your answer"
-                            class="partTwoInput"
-                            name="aptitude"
-                            cols="30"
-                            rows="10"
-                        ></textarea>
-                        <p class="text">
-                            Dedication / Work Ethic / Heart:<span
-                                class="requiredAsterisk"
-                                >*</span
-                            >
-                            <br /><span class="tiny-text"
-                                >Please share a specific example of your
-                                dedication and work ethic.</span
-                            >
-                        </p>
-                        <textarea
-                            placeholder="Your answer"
-                            class="partTwoInput"
-                            name="dedication"
-                            cols="30"
-                            rows="10"
-                        ></textarea>
-                        <p class="text">
-                            Passion / Persistence:<span class="requiredAsterisk"
-                                >*</span
-                            >
-                            <br /><span class="tiny-text"
-                                >Please tell us about something you are
-                                passionate about and have worked hard to
-                                achieve. This can be clubs, sports teams,
-                                hobbies, church groups, etc.</span
-                            >
-                        </p>
-                        <textarea
-                            placeholder="Your answer"
-                            class="partTwoInput"
-                            name="passion"
-                            cols="30"
-                            rows="10"
-                        ></textarea>
-                        <br />
+                                <p class="requiredWord tiny-text">* Required</p>
+                                <p class="text">
+                                    Name:<span class="requiredAsterisk">*</span>
+                                </p>
+                                <input
+                                    name="name"
+                                    type="text"
+                                    placeholder="Your answer"
+                                    required
+                                />
+                                <p class="text">
+                                    Email Address:<span class="requiredAsterisk"
+                                        >*</span
+                                    >
+                                </p>
+                                <input
+                                    name="email"
+                                    type="email"
+                                    placeholder="Your answer"
+                                    required
+                                />
+                                <p class="text">
+                                    School you currently attend:<span
+                                        class="requiredAsterisk"
+                                        >*</span
+                                    >
+                                </p>
+                                <input
+                                    name="school"
+                                    type="text"
+                                    placeholder="Your answer"
+                                    required
+                                />
+                                <p class="text">
+                                    Do you meet our eligibility
+                                    requirements?<span class="requiredAsterisk"
+                                        >*</span
+                                    >
+                                    <br />
+                                    <span class="tiny-text">
+                                        Are you a high school senior? Have you
+                                        been nominated? Do you live in north
+                                        Mississippi?
+                                    </span>
+                                </p>
+                                <label>
+                                    <input
+                                        class="formRadioButton"
+                                        id="radioButtonYes"
+                                        type="radio"
+                                        name="eligible"
+                                        value="true"
+                                        required
+                                    />
+                                    Yep, lets get started! </label
+                                ><br /><br />
+                                <label>
+                                    <input
+                                        class="formRadioButton"
+                                        id="radioButtonNo"
+                                        type="radio"
+                                        name="eligible"
+                                        value="false"
+                                    />
+                                    I don't think so.
+                                </label>
+                            </div>
+                            <div class="formContainer hidden" id="formPartTwo">
+                                <p class="brown-banner banner-full banner-text">
+                                    Application Information
+                                </p>
+                                <p class="brown-banner banner-half banner-text">
+                                    Let us get to know you better!
+                                </p>
+                                <div class="form-padding">
+                                    <p class="text">
+                                        Age:<span class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                    </p>
+                                    <input
+                                        class="partTwoInput"
+                                        placeholder="Your answer"
+                                        name="age"
+                                        type="number"
+                                    />
 
-                        <p class="tiny-text">
-                            Base Camp Coding Academy admits students of any
-                            race, color, national and ethnic origin to all the
-                            rights, privileges, programs, and activities
-                            generally accorded or made available to students at
-                            the school. It does not discriminate on the basis of
-                            race, color, national and ethnic origin in
-                            administration of its educational policies,
-                            admissions policies, scholarship and loan programs,
-                            and athletic and other school-administered programs.
-                        </p>
-                        <p class="text">
-                            Meeting Date:<span class="requiredAsterisk">*</span>
-                        </p>
-                        <input
-                            class="partTwoInput"
-                            placeholder="Your answer"
-                            name="meeting"
-                            type="date"
-                        />
+                                    <p class="text">
+                                        Phone:<span class="requiredAsterisk"
+                                            >*</span
+                                        ><br /><span class="tiny-text greyify"
+                                            >Ex. 1234567890</span
+                                        >
+                                    </p>
+                                    <input
+                                        class="partTwoInput"
+                                        id="phoneInput"
+                                        placeholder="Your answer"
+                                        name="phone"
+                                        pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                        type="text"
+                                    />
+
+                                    <p class="text">
+                                        Graduation:<span
+                                            class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                    </p>
+                                    <input
+                                        class="partTwoInput"
+                                        placeholder="Your answer"
+                                        name="graduation"
+                                        type="date"
+                                    />
+
+                                    <div class="group-info">
+                                        <p class="text">
+                                            What is your current plan for next
+                                            year?<span class="requiredAsterisk"
+                                                >*</span
+                                            >
+                                            <br /><span class="tiny-text"
+                                                >What do you plan to do after
+                                                you graduate high school if it
+                                                were not for Base Camp?</span
+                                            >
+                                        </p>
+                                    </div>
+                                    <textarea
+                                        placeholder="Your answer"
+                                        class="partTwoInput no-resize"
+                                        name="plans"
+                                        rows="1"
+                                    >
+                                    </textarea>
+                                </div>
+                                <div
+                                    class="brown-banner banner-full banner-text"
+                                >
+                                    <p>
+                                        Base Camp Coding Academy is looking for
+                                        students with the aptitude, and the
+                                        dedication, to succeed in this program.
+                                        Please share stories and examples of
+                                        these two traits that demonstrate why
+                                        you believe you will make an excellent
+                                        candidate.
+                                    </p>
+                                </div>
+                                <div class="form-padding">
+                                    <div>
+                                        <p class="tiny-text">
+                                            For example, you might include times
+                                            when you were able to think
+                                            logically or creatively to solve a
+                                            problem, or when you overcame a
+                                            challenging situation with school,
+                                            work, or a project.
+                                        </p>
+                                    </div>
+                                    <p class="text">
+                                        Aptitude:<span class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                        <br /><span class="tiny-text"
+                                            >Please share a specific example of
+                                            when you were a strong problem
+                                            solver.</span
+                                        >
+                                    </p>
+                                    <textarea
+                                        placeholder="Your answer"
+                                        class="partTwoInput no-resize"
+                                        name="aptitude"
+                                        cols="50"
+                                        rows="1"
+                                    ></textarea>
+                                    <p class="text">
+                                        Dedication / Work Ethic / Heart:<span
+                                            class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                        <br /><span class="tiny-text"
+                                            >Please share a specific example of
+                                            your dedication and work
+                                            ethic.</span
+                                        >
+                                    </p>
+                                    <textarea
+                                        placeholder="Your answer"
+                                        class="partTwoInput no-resize"
+                                        name="dedication"
+                                        cols="50"
+                                        rows="1"
+                                    ></textarea>
+                                    <p class="text">
+                                        Passion / Persistence:<span
+                                            class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                        <br /><span class="tiny-text"
+                                            >Please tell us about something you
+                                            are passionate about and have worked
+                                            hard to achieve. This can be clubs,
+                                            sports teams, hobbies, church
+                                            groups, etc.</span
+                                        >
+                                    </p>
+                                    <textarea
+                                        placeholder="Your answer"
+                                        class="partTwoInput no-resize"
+                                        name="passion"
+                                        cols="50"
+                                        rows="1"
+                                    ></textarea>
+                                    <br />
+
+                                    <p class="tiny-text">
+                                        Base Camp Coding Academy admits students
+                                        of any race, color, national and ethnic
+                                        origin to all the rights, privileges,
+                                        programs, and activities generally
+                                        accorded or made available to students
+                                        at the school. It does not discriminate
+                                        on the basis of race, color, national
+                                        and ethnic origin in administration of
+                                        its educational policies, admissions
+                                        policies, scholarship and loan programs,
+                                        and athletic and other
+                                        school-administered programs.
+                                    </p>
+                                    <p class="text">
+                                        Meeting Date:<span
+                                            class="requiredAsterisk"
+                                            >*</span
+                                        >
+                                    </p>
+                                    <input
+                                        class="partTwoInput"
+                                        placeholder="Your answer"
+                                        name="meeting"
+                                        type="date"
+                                    />
+                                </div>
+                            </div>
+                            <br />
+                            <button class="submit">
+                                <span class="btn-text">SUBMIT</span></button
+                            ><br /><br />
+                        </form>
                     </div>
                 </div>
-                <br />
-                <button class="submit">
-                    <span class="btn-text">SUBMIT</span></button
-                ><br /><br />
-            </form>
+            </div>
         </div>
         <script src="./../../javascript/formApply.js"></script>
     </body>

@@ -9,41 +9,55 @@
             rel="stylesheet"
             type="text/css"
             media="screen"
-            href="./css/main.css"
+            href="./css/user_home.css"
         />
         <link
             rel="stylesheet"
             type="text/css"
             media="screen"
-            href="./css/user_home.css"
+            href="./css/main.css"
         />
+        <link rel="stylesheet" href="./bootstrap/bootstrap.css">
     </head>
     <body>
         <nav id="navbar">
-            <ul>
-                <li id="navitem"><a href="/">Home</a></li>
-                <li id="navitem"><a href="user/apply">Apply</a></li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li id="navitem"><a href="/">Home</a></li>
+                    <li id="navitem"><a href="user/apply">Apply</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="headerImageContainer">
-            <img id="bccaHomeLogo" src="../images/logo1b-google-apps.png" />
+            <img id="bccaHomeLogo" src="../images/BaseCamp_WebLogo_2.png" />
         </div>
-        <div class="container">
-            <div id="infoContainer">
+        <div id="infoContainer">
+            <div class="container">
+            <div id="bccaInfoContainer">
                 <p id="infoHeader">What is Base Camp Coding Academy</p>
-                <p id="infoBody">
-                    Located in Water Valley, MS, Base Camp Coding Academy (BCCA)
-                    is a hands-on, challenging and fun program, designed to
-                    train students to be software developers in 12 months.
+                <p class="infoBody">
+                    Located in Water Valley, MS, Base Camp Coding Academy (BCCA) is
+                    a hands-on, challenging and fun program, designed to train
+                    students to be software developers in 12 months.
                 </p>
-                <p id="infoBody">
+                <p class="infoBody">
                     In a small classroom setting, you will work with real world
                     technologies to learn the fundamentals of coding, app
-                    development and the life leadership skills you will need to
-                    be successful in your career and competitive in the job
-                    market.
+                    development and the life leadership skills you will need to be
+                    successful in your career and competitive in the job market.
                 </p>
             </div>
+            <img id="classImage" src="../images/class-of-2019.jpg" />
+
+            <div id="footerContainer" class="row">
+                <p id="copyrightText" class="col-lg-8 col-sm-9">Copyright © Base Camp Coding Academy 2016 |  Legal</p>
+                <div id="socialMediaLinks" class="4">
+                    <a class="linkIcon" href="https://www.facebook.com/basecampcodingacademy"><img src="../images/facebook-icon.png"></img></a>
+                    <a class="linkIcon" href="https://twitter.com/basecampcoding"><img src="../images/twitter-icon.png"></img></a>
+                    <a class="linkIcon" href="https://www.instagram.com/basecampcoding/"><img src="../images/instagram-icon.png"></img></a>
+                </div>
+            </div>
+        </div>
         </div>
     </body>
 </html>

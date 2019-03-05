@@ -11,14 +11,26 @@
             media="screen"
             href="./css/main.css"
         />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/landing.css"
+        />
+        <link rel="stylesheet" href="./bootstrap/bootstrap.css">
     </head>
     <body>
-        <nav id="navbar">
-            <ul>
-                <li id="navitem"><a href="admin">Admin</a></li>
-                <li id="navitem"><a href="user">Applicant</a></li>
-            </ul>
-        </nav>
-        <div class="container"></div>
+        <div class="container">
+            <div class="card">
+                    <p id="landingHeader">Please Select a Port:</p>
+                <div class="row justify-content-around">
+                    <img id="domiImage" src="./images/domi(1).png"></img>
+                </div>
+                <div class="row justify-content-around">
+                <a href="/admin"><button class="selectionButton">Admin Port</button></a>
+                <a href="/user"><button class="selectionButton">User Port</button></a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
