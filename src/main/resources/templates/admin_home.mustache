@@ -5,18 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
-        <link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="./css/admin_page.css"
-        />
+        <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
         <link
             rel="stylesheet"
             type="text/css"
             media="screen"
             href="./css/main.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./css/admin_page.css"
         />
         <link
             rel="stylesheet"
@@ -31,54 +33,73 @@
                 <li id="navitem"><a href="/">Home</a></li>
             </ul>
         </nav>
-        <div class="container card">
-            <div id="appSortContainer">
-                <input type="search" placeholder="Search..." id="adminSearchBar" />
-                <select id="sortBy" name="sortOption">
-                    <option value="all">All</option>
-                    <option value="eligible">Eligible</option>
-                    <option value="nonEligible">Non-Eligible</option>
-                </select>
+        <div class="container ">
+            <div class="row justify-content-around">
+                <div class="col-lg-8 col-md-12 col-sm-12 ">
+                    <div id="adminCard" class="card ">
+                        <div class="row">
+
+                                <input
+                                    class="col-4"
+                                    type="search"
+                                    placeholder="Search..."
+                                    id="adminSearchBar"
+                                />
+                            
+                                <select class="col-3" id="sortBy" name="sortOption">
+                                    <option value="all">All</option>
+                                    <option value="eligible">Eligible</option>
+                                    <option value="nonEligible"
+                                        >Non-Eligible</option
+                                    >
+                                </select>
+                            
+                        </div>
+
+                        <div class="appHeaderContainer">
+                            <div class="appHeader">
+                                <p>Name</p>
+                            </div>
+                            <div class="appHeader schoolColumn">
+                                <p>School</p>
+                            </div>
+                            <div
+                                class="appHeader eligibleColumn"
+                            >
+                                <p>Eligibility</p>
+                            </div>
+                        </div>
+                        {{#applications}}
+                        <div class="applicantContainer">
+                            <div class="appInfoContainer">
+                                <a
+                                    class="appInfo applicantName"
+                                    href="/admin/applicants/{{ id }}"
+                                    >{{ name }}</a
+                                >
+                            </div>
+                            <div class="appInfoContainer applicantSchool">
+                                <p class="appSchool">{{ school }}</p>
+                            </div>
+                            <div class="applicantEligible">
+                                {{#eligible}}
+                                <i
+                                    class="fas fa-check isEligibleImage isEligible"
+                                    value="{{ eligible }}"
+                                ></i>
+                                {{/eligible}}
+                                {{^eligible}}
+                                <i
+                                    class="fas fa-times notEligibleImage"
+                                    value="{{ eligible }}"
+                                ></i>
+                                {{/eligible}}
+                            </div>
+                        </div>
+                        {{/applications}}
+                    </div>
+                </div>
             </div>
-            <div class="appHeaderContainer">
-                <div class="appHeader">
-                    <p>Name</p>
-                </div>
-                <div class="appHeader schoolColumn">
-                    <p>School</p>
-                </div>
-                <div class="appHeader eligibleColumn">
-                    <p>Eligibility</p>
-                </div>
-            </div>
-            {{#applications}}
-            <div class="applicantContainer">
-                <div class="appInfoContainer">
-                    <a
-                        class="appInfo applicantName"
-                        href="/admin/applicants/{{ id }}"
-                        >{{ name }}</a
-                    >
-                </div>
-                <div class="appInfoContainer applicantSchool">
-                    <p class="appSchool">{{ school }}</p>
-                </div>
-                <div class="applicantEligible">
-                    {{#eligible}}
-                    <i
-                        class="fas fa-check isEligibleImage isEligible"
-                        value="{{ eligible }}"
-                    ></i>
-                    {{/eligible}}
-                    {{^eligible}}
-                    <i
-                        class="fas fa-times notEligibleImage"
-                        value="{{ eligible }}"
-                    ></i>
-                    {{/eligible}}
-                </div>
-            </div>
-            {{/applications}}
         </div>
         <script src="./javascript/adminPage.js"></script>
     </body>
