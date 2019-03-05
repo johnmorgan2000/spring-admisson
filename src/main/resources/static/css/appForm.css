@@ -7,7 +7,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.greyify{
+    color:gray;
+}
 .tiny-text {
     font-size: 13px;
 }

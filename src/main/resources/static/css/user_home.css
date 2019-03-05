@@ -32,7 +32,7 @@
     font-size: 36px;
 }
 
-#infoBody {
+.infoBody {
     font-size: 14px;
     line-height: 20px;
 }
@@ -52,4 +52,22 @@
 
 #classImage {
     width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    #classImage {
+        width: 800px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #bccaInfoContainer {
+        width: 1000px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
