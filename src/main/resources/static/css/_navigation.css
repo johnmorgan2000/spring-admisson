@@ -30,3 +30,11 @@
 #navitem a:hover {
     color: var(--base-grey);
 }
+
+/* @media only screen and (max-width: 750px) {
+    #navbar{
+        padding-left: 0;
+    }
+} */
+    
+

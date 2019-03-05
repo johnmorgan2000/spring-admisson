@@ -1,9 +1,19 @@
-.card {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#landingHeader {
+    text-align: center;
+    font-size: 4vw;
 }
 
 #domiImage {
-    width: 60%;
+    width: 45%;
+    border-radius: 50%;
+    border: 2px solid var(--base-blue-dark);
+}
+
+.selectionButton {
+    background-color: var(--base-blue-dark);
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 10px;
 }

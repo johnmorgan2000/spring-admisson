@@ -3,12 +3,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 175px;
+    height: 250px;
     margin: 0;
     padding: 0;
 }
-.greyify{
-    color:gray;
+
+#navitem {
+    cursor: pointer;
+}
+
+textarea.no-resize {
+    resize: none;
+}
+.greyify {
+    color: gray;
 }
 .tiny-text {
     font-size: 13px;
